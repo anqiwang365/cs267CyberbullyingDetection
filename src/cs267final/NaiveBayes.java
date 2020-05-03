@@ -2,18 +2,18 @@ package cs267final;
 import java.util.*;
 
 /**
- * there are two category, 0 represents non-cyberbullying, 1 represents cyberbullying
+ * There are two categories, 0 represents non-cyberbullying, 1 represents cyberbullying
  * @author Anqi Wang Anket Sah
  *
  */
 public class NaiveBayes {
 
-	//key is feature word value is appearance of feature word in each category
-	private Map<String,Map<Integer,Integer>> featureCount;//count features in each classification
+	//key is feature, word value is appearance of the featured word in each category
+	private Map<String,Map<Integer,Integer>> featureCount; //count features in each classification
 	
-	private Map<Integer,Integer> classifierCount;//count appearance of classifier
+	private Map<Integer,Integer> classifierCount; //count appearance of the classifier
 	
-//	private Map<String,Map<Integer,Double>> probClassifyCount;
+	//private Map<String,Map<Integer,Double>> probClassifyCount;
 	
 	public NaiveBayes(Map<String,Map<Integer,Integer>> featureCount,Map<Integer,Integer> classifierCount) {
 		this.featureCount = featureCount;
@@ -28,8 +28,8 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * it processes each cleaned message. 
-	 * it records features and classifier by updating featureCount and classifierCount
+	 * It processes each cleaned message. 
+	 * It records features and classifier by updating featureCount and classifierCount
 	 * @param data 
 	 * @param category
 	 */
@@ -55,10 +55,10 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * get number of occurrence of feature in each category
+	 * Get number of occurrences of features in each category
 	 * @param feature
 	 * @param category
-	 * @return
+	 * @return the feature count
 	 */
 	public int getCountOfFeature(String feature, int category) {
 		if(feature == null || category<0 ||category >1) {
@@ -68,9 +68,9 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * get number of messages of category
+	 * Get number of messages of category
 	 * @param category
-	 * @return
+	 * @return the classifier count
 	 */
 	public int getCountOfCategory(int category) {
 		if(category<0 ||category >1) {
@@ -80,7 +80,7 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * return probability of each category
+	 * Return probability of each category
 	 * @param category
 	 * @return
 	 */
@@ -91,8 +91,8 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * it calculates probability of each feature i each category
-	 * weighted probability in order to improve accuracy, add default weight to each count by 1
+	 * It calculates probability of each feature i in each category
+	 * Weighted probability in order to improve accuracy, add default weight to each count by 1
 	 * @param feature
 	 * @param category
 	 */
@@ -132,9 +132,9 @@ public class NaiveBayes {
 //	}
 //	
 	/**
-	 * calculate the probability of the given data in each category. 
-	 * choose the maximum result as its final category. 
-	 * prob = prob(category) * prob(f1|category)
+	 * Calculate the probability of the given data in each category. 
+	 * Choose the maximum result as its final category. 
+	 * Formula: probability = prob(category) * prob(f1|category)
 	 * @param data
 	 * @return
 	 */
@@ -162,7 +162,7 @@ public class NaiveBayes {
 	}
 	
 	/**
-	 * load train data into featureCount and classifierCount
+	 * Load train data into featureCount and classifierCount
 	 * calculate probability of each word in each category
 	 * @param data
 	 * @param category
