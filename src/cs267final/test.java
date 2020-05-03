@@ -45,10 +45,10 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print("The number of senetences with normal data: "+normalNum);
-		System.out.println("The number of sentences with bullying data: "+bullyNum);
-		System.out.println("The total Cyberbullying test data: "+total);
-		System.out.println("The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
+		System.out.print(" The number of senetences with normal data: "+normalNum);
+		System.out.println("  The number of sentences with bullying data: "+bullyNum);
+		System.out.println("\n The total Cyberbullying test data: "+total);
+		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 		//toString(testBullyRes);
 		 normalNum = 0;
 		 bullyNum = 0;
@@ -63,10 +63,10 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print("The number of normal data senetences: "+normalNum);
-		System.out.println("The number of bullying sentences: "+bullyNum);
-		System.out.println("The total Cyberbullying test data: "+total);
-		System.out.println("The accuracy of the model is "+ (double)normalNum*100/total+"%" );
+		System.out.print(" The number of senetences with normal data: "+normalNum);
+		System.out.println("  The number of sentences with bullying data: "+bullyNum);
+		System.out.println("\n The total Cyberbullying test data: "+total);
+		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 	}
 	
 	public static Set<String> readStopWord() {
