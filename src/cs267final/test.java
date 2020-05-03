@@ -47,8 +47,8 @@ public class test {
 		}
 		System.out.print("number of normal data is: "+normalNum);
 		System.out.println("number of bully data is: "+bullyNum);
-		System.out.println(total);
-		
+		System.out.println("total test cyberbullying data is "+total);
+		System.out.println("accuracy of model is "+ (double)bullyNum*100/total+"%" );
 		//toString(testBullyRes);
 		 normalNum = 0;
 		 bullyNum = 0;
@@ -65,7 +65,8 @@ public class test {
 		}
 		System.out.print("number of normal data is: "+normalNum);
 		System.out.println("number of bully data is: "+bullyNum);
-		System.out.println(total);
+		System.out.println("total test non cyberbullying data is "+total);
+		System.out.println("accuracy of model is "+ (double)normalNum*100/total+"%" );
 	}
 	
 	public static Set<String> readStopWord() {
