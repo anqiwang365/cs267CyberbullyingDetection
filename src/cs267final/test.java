@@ -46,7 +46,7 @@ public class test {
 			total++;
 		}
 		System.out.print(" The number of normal sentences with data related to Cornona Virus: "+normalNum);
-		System.out.println("  The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
+		System.out.println(" | The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
 		System.out.println("\n The total training data for Cyberbullying: "+total);
 		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 		//toString(testBullyRes);
@@ -64,9 +64,9 @@ public class test {
 			total++;
 		}
 		System.out.print("\n\n The number of normal sentences with data related to Cornona Virus: "+normalNum);
-		System.out.println("  The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
-		System.out.println("\n The total training data for Cyberbullying: "+total);
-		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
+		System.out.println(" | The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
+		System.out.println("\n The total Cyberbullying test data: "+total);
+		System.out.println("\n The accuracy of the model is "+ (double)normalNum*100/total+"%" );
 	}
 	
 	public static Set<String> readStopWord() {
