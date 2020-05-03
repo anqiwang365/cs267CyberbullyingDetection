@@ -45,10 +45,10 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print("number of normal data is: "+normalNum);
-		System.out.println("number of bully data is: "+bullyNum);
-		System.out.println("total test cyberbullying data is "+total);
-		System.out.println("accuracy of model is "+ (double)bullyNum*100/total+"%" );
+		System.out.print("The number of senetences with normal data: "+normalNum);
+		System.out.println("The number of sentences with bullying data: "+bullyNum);
+		System.out.println("The total Cyberbullying test data: "+total);
+		System.out.println("The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 		//toString(testBullyRes);
 		 normalNum = 0;
 		 bullyNum = 0;
@@ -63,10 +63,10 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print("number of normal data is: "+normalNum);
-		System.out.println("number of bully data is: "+bullyNum);
-		System.out.println("total test non cyberbullying data is "+total);
-		System.out.println("accuracy of model is "+ (double)normalNum*100/total+"%" );
+		System.out.print("The number of normal data senetences: "+normalNum);
+		System.out.println("The number of bullying sentences: "+bullyNum);
+		System.out.println("The total Cyberbullying test data: "+total);
+		System.out.println("The accuracy of the model is "+ (double)normalNum*100/total+"%" );
 	}
 	
 	public static Set<String> readStopWord() {
@@ -84,14 +84,14 @@ public class test {
 			}
 			reader.close();
 		} catch(Exception e) {
-			System.out.print("load file error");
+			System.out.print("File load error!");
 		}
 		return stopword;
 		
 	}
 	
-	/**
-	 * clean data from train dataset and test dataset
+	/*
+	 * This function is used to perform data cleaning for the training as well as test dataset
 	 */
 	public static List<List<String>> cleanData(String path,Set<String> stopword) {
 		
@@ -114,7 +114,7 @@ public class test {
 			}
 			reader.close();
 		} catch(Exception e) {
-			System.out.print("load file error");
+			System.out.print("File load error!");
 		}
 		return res;
 	}
@@ -123,7 +123,6 @@ public class test {
 		for(String s:res) {
 			System.out.println(s);
 		}
-	}
-	
+	}	
 	
 }
