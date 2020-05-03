@@ -13,18 +13,16 @@ public class NaiveBayes {
 	
 	private Map<Integer,Integer> classifierCount;//count appearance of classifier
 	
-//	private Map<String,Map<Integer,Double>> probClassifyCount;
+
 	
 	public NaiveBayes(Map<String,Map<Integer,Integer>> featureCount,Map<Integer,Integer> classifierCount) {
 		this.featureCount = featureCount;
 		this.classifierCount = classifierCount;
-		//this.probClassifyCount = probClassifyCount;
 	}
 	
 	public NaiveBayes() {
 		featureCount = new HashMap<>();
 		classifierCount = new HashMap<>();
-	//	probClassifyCount = new HashMap<>();
 	}
 	
 	/**
@@ -119,18 +117,7 @@ public class NaiveBayes {
 		
 	}
 	
-	
-//	public double getWeightedProb(String feature,int category) {
-//		if(!probClassifyCount.containsKey(feature)) {
-//			return 0.5;
-//		}
-//		
-//		if(!probClassifyCount.get(feature).containsKey(category)&& !probClassifyCount.get(feature).containsKey(category)) {
-//			
-//		}
-//		return probClassifyCount.get(feature).get(category);
-//	}
-//	
+		
 	/**
 	 * calculate the probability of the given data in each category. 
 	 * choose the maximum result as its final category. 
@@ -161,18 +148,5 @@ public class NaiveBayes {
 		 
 	}
 	
-	/**
-	 * load train data into featureCount and classifierCount
-	 * calculate probability of each word in each category
-	 * @param data
-	 * @param category
-	 */
-//	public void trainModel(List<List<String>> data,int category) {
-//		for(List<String> list:data) {
-//			this.loadData(list, category);
-//			
-//		}
-//		
-//		
-//	}
+
 }
