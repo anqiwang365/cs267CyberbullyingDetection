@@ -45,9 +45,9 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print(" The number of senetences with normal data: "+normalNum);
-		System.out.println("  The number of sentences with bullying data: "+bullyNum);
-		System.out.println("\n The total Cyberbullying test data: "+total);
+		System.out.print(" The number of normal sentences with data related to Cornona Virus: "+normalNum);
+		System.out.println("  The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
+		System.out.println("\n The total training data for Cyberbullying: "+total);
 		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 		//toString(testBullyRes);
 		 normalNum = 0;
@@ -63,9 +63,9 @@ public class test {
 			testBullyRes.add(res);
 			total++;
 		}
-		System.out.print(" The number of senetences with normal data: "+normalNum);
-		System.out.println("  The number of sentences with bullying data: "+bullyNum);
-		System.out.println("\n The total Cyberbullying test data: "+total);
+		System.out.print("\n\n The number of normal sentences with data related to Cornona Virus: "+normalNum);
+		System.out.println("  The number of bullying sentences with data related to Cornona Virus: "+bullyNum);
+		System.out.println("\n The total training data for Cyberbullying: "+total);
 		System.out.println("\n The accuracy of the model is "+ (double)bullyNum*100/total+"%" );
 	}
 	
