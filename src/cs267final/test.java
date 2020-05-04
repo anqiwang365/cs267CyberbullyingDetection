@@ -59,7 +59,8 @@ public class test {
 		 normalNum = 0;
 		 bullyNum = 0;
 		 total = 0;
-		//test 
+		 
+		//testing the accuracy of the model - non bullying dataset
 		for(List<String> list:testNonBullyData) {
 			String res = nb.naiveBay(list);
 			if(res.equals("normal")) {
