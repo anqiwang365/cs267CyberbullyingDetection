@@ -17,9 +17,10 @@ public class test {
 		Map<Integer,Integer> classifierCount = new HashMap<>();
 		NaiveBayes nb = new NaiveBayes(featureCount,classifierCount);
 		String testBullyPath = "testBully";
+		String testNonBullyPath = "testNonBully";
 		String trainBullyPath = "trainBully";
 		String trainNonBullyPath = "trainNonBully";
-		String testNonBullyPath = "testNonBully";
+		
 		Set<String> stopword = readStopWord();
 		List<List<String>> trainBullyData = cleanData(trainBullyPath,stopword);
 		List<List<String>> trainNonBullyData = cleanData(trainNonBullyPath,stopword);
@@ -28,12 +29,17 @@ public class test {
 		List<String> testBullyRes = new ArrayList<>();
 		int normalNum = 0;
 		int bullyNum = 0;
+		
+		//training model based on cyberbullying training dataset
 		for(List<String> list:trainBullyData) {
 			nb.loadData(list, 0);
 		}
+		//training model based on non-cyerbullying training dataset
 		for(List<String> list:trainNonBullyData) {
 			nb.loadData(list, 1);
 		}
+		
+		//testing the accuracy of the model - bullying dataset
 		int total = 0;
 		for(List<String> list:testBullyData) {
 			String res = nb.naiveBay(list);
@@ -53,6 +59,8 @@ public class test {
 		 normalNum = 0;
 		 bullyNum = 0;
 		 total = 0;
+		 
+		//testing the accuracy of the model - non bullying dataset
 		for(List<String> list:testNonBullyData) {
 			String res = nb.naiveBay(list);
 			if(res.equals("normal")) {
